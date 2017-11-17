@@ -1,5 +1,6 @@
 require 'json'
-violation_data = JSON.parse(%q|
+name_data = JSON.parse(%q|
+
 [{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
 ,{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
 ,{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
@@ -1000,4 +1001,8 @@ violation_data = JSON.parse(%q|
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}]
+
 |)
+
+#phrase one
+
