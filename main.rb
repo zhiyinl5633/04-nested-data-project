@@ -1027,8 +1027,6 @@ def name_to_info(names,user_name)
     if person["nm"] == user_name.upcase
       return {rank: person["rnk"], ethnicity: person["ethcty"], count: person["cnt"]}
       #break
-    else
-        
     end
   end
 end  
