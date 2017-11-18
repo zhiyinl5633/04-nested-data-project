@@ -1012,8 +1012,38 @@ puts name_data[0]["rnk"]
 # PHASE 2
 puts "What is your name?"
 user_name = gets.chomp.upcase
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+name_data.each do |person|
+    if person["nm"] == user_name
+        puts person["rnk"]
+    end
+end
+
+=======
+name_data.each do |name|
+    name.each do |attribute, data|
+        attribute == "nm"
+        data.each do |name|
+            if user_name == name
+                attribute == "rnk"
+                data.each do |rank|
+                    puts "Your name is ranked #{rank}"
+                end
+            else
+                puts "Sorry your name is not in the system"
+            end
+        end
+    end
+end
+
+puts "What is your name?"
+user_name = gets.chomp.upcase
+>>>>>>> 5d3bb5f939e18ef02d98af65cf3248913217762f
 name_data.unqi!.each do |person|
   if person["nm"] == user_name
     puts "Your rank: #{person["rnk"]}"
   end
 end
+>>>>>>> 15a312b2a613a0425ddcceddda70b0b57ca10478
