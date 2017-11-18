@@ -1012,8 +1012,8 @@ puts name_data[0]["rnk"]
 # PHASE 2
 puts "What is your name?"
 user_name = gets.chomp.upcase
-name_data.each do |people|
-    people.each do |attribute, data|
+name_data.each do |name|
+    name.each do |attribute, data|
         attribute == "nm"
         data.each do |name|
             if user_name == name
@@ -1028,11 +1028,10 @@ name_data.each do |people|
     end
 end
 
-
 puts "What is your name?"
 user_name = gets.chomp.upcase
-name_data["nm"].each do |name|
-    if user_name == name
-        puts "Your name is ran"
-    end
+name_data.each do |person|
+  if person["nm"] == user_name
+    puts "Your rank: #{person["rnk"]}"
+  end
 end
