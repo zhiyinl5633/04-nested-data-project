@@ -1030,11 +1030,11 @@ def name_to_rank(names,user_name)
 #  end
 #end  
 names.uniq!.each do |person|
-  if person["nm"] == user_name
+  if person["nm"] == user_name.upcase
     return "Your rank is #{person["rnk"]}"
     
   end
-  end
-  end
+end
+end
 
-puts name_to_rank(name_data,"CHRISTINA")
+puts name_to_rank(name_data,"Christina")
