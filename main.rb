@@ -1012,17 +1012,10 @@ puts name_data[0]["rnk"]
 # PHASE 2
 puts "What is your name?"
 user_name = gets.chomp.upcase
-puts "What is your ethnicity"
-user_ethnicity = gets.chomp.upcase
 name_data.uniq!.each do |person|
-    if person["nm"] == user_name && person["ethcty"] == user_ethnicity
+    if person["nm"] == user_name
         puts "Your rank: #{person["rnk"]}"
-        break
-    else
-        puts "Sorry, your name is not available for this ethnicity"
-        break
     end
-    
 end
 
 
