@@ -1017,7 +1017,7 @@ user_ethnicity = gets.chomp.upcase
 name_data.uniq!.each do |person|
   if person["nm"] == user_name && person["ethcty"] == user_ethnicity
     puts "Your rank is #{person["rnk"]}"
-    e
+    
   end
 end
 
