@@ -1030,7 +1030,7 @@ end
 
 puts "What is your name?"
 user_name = gets.chomp.upcase
-name_data.each do |person|
+name_data.unqi!.each do |person|
   if person["nm"] == user_name
     puts "Your rank: #{person["rnk"]}"
   end
