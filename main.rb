@@ -1010,24 +1010,31 @@ name_data = JSON.parse(%q|
 
 
 #PHASE 2
-puts "What is your name?"
-user_name = gets.chomp.upcase
-puts "What is your ethnicity?"
-user_ethnicity = gets.chomp.upcase
-name_data.uniq!.each do |person|
-  if person["nm"] == user_name && person["ethcty"] == user_ethnicity
-    puts "Your rank is #{person["rnk"]}"
+#puts "What is your name?"
+#user_name = gets.chomp.upcase
+#puts "What is your ethnicity?"
+#user_ethnicity = gets.chomp.upcase
+#name_data.uniq!.each do |person|
+#  if person["nm"] == user_name && person["ethcty"] == user_ethnicity
+#    puts "Your rank is #{person["rnk"]}"
     
-  end
-end
+#  end
+#end
 
 #PHASE 3
 def name_to_rank(names,user_name)
-  names.each do |person|
-    if person["nm"] == user_name
-      return person["rnk"]
-    end
+ # names.each do |person|
+ #   if person["nm"] == user_name
+ #    puts person["rnk"]
+ #   end
+#  end
+#end  
+names.uniq!.each do |person|
+  if person["nm"] == user_name
+    return "Your rank is #{person["rnk"]}"
+    
   end
-end  
+  end
+  end
 
-puts name_to_rank(name_data,"ava")
+puts name_to_rank(name_data,"CHRISTINA")
