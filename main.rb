@@ -1004,7 +1004,9 @@ name_data = JSON.parse(%q|
 
 |)
 
-#phrase one
+#PHASE 1
+puts name_data[0]["nm"]
+puts name_data[0]["rnk"]
 
 
 # PHASE 2
