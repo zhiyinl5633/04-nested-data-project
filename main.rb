@@ -1006,3 +1006,16 @@ name_data = JSON.parse(%q|
 
 #phrase one
 
+
+# PHASE 2
+puts "What is your name?"
+ user_name = gets.chomp
+name_data["data"].each do |violation|
+#   # puts violation[8]
+#   if violation[8] == code_num
+#     puts violation[9]
+#     puts "Costs #{violation[10]}in Manhattan 96th St and below."
+#     puts "Costs #{violation[11]}everywhere else."
+#     break
+#   end
+# end
