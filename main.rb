@@ -1012,22 +1012,19 @@ puts name_data[0]["rnk"]
 # PHASE 2
 puts "What is your name?"
 user_name = gets.chomp.upcase
+<<<<<<< HEAD
 puts "What is your ethnicity?"
 user_ethnicity = gets.chomp.upcase
 name_data.uniq!.each do |person|
   if person["nm"] == user_name && person["ethcty"] == user_ethnicity
     puts "Your rank is #{person["rnk"]}"
   end
+=======
+name_data.uniq!.each do |person|
+    if person["nm"] == user_name
+        puts "Your rank: #{person["rnk"]}"
+    end
+>>>>>>> f4c9b6257585d0fbcee08b50029c37c6d8847a05
 end
 
-# PHASE 3
-def name_to_info(person,code_num)
- # violations["data"].each do |violation|
-  #  if violation[8] == code_num
-    #  return {violation_string: violation[9], fine_manhattan: violation[10], fine_other: violation[11]}
-     # break
-  #  end
- # end
-#end
-# puts violation_num_to_info(violation_data,"13")
-end
+
