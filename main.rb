@@ -1,6 +1,5 @@
 require 'json'
 name_data = JSON.parse(%q|
-
 [{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
 ,{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
 ,{"brth_yr":"2011","cnt":"24","ethcty":"ASIAN AND PACIFIC ISLANDER","gndr":"FEMALE","nm":"ABIGAIL","rnk":"24"}
@@ -1001,7 +1000,6 @@ name_data = JSON.parse(%q|
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}
 ,{"brth_yr":"2011","cnt":"15","ethcty":"BLACK NON HISPANIC","gndr":"FEMALE","nm":"DAKOTA","rnk":"40"}]
-
 |)
 
 #PHASE 1
@@ -1021,10 +1019,18 @@ name_data = JSON.parse(%q|
 #end
 
 #PHASE 3
+<<<<<<< HEAD
 def name_to_rank(info,user_name, user_ethnicity)
 info.uniq!.each do |person|
     if person["nm"] == user_name.upcase && person["ethcty"] == user_ethnicity.upcase 
         return {name_rank: person["rnk"], name_birthyear: person["brth_yr"], name_count: person["cnt"] }
+=======
+def name_to_info(names,user_name,user_ethnicity)
+  names.uniq!.each do |person|
+    if person["nm"] == user_name.upcase && person["ethcty"] == user_ethnicity.upcase 
+      return {rank: person["rnk"], count: person["cnt"]}
+      #break
+>>>>>>> d28f4f7264b90a26ae6b4d836eb65658fc435e51
     end
 end
 end  
@@ -1033,18 +1039,17 @@ end
 def run(names)
   puts "What is your name?"
   user_name = gets.chomp.upcase
+  puts "What is your ethnicity?"
+  user_ethnicity = gets.chomp.upcase
 begin
-     name_info = name_to_info(names,user_name)
+     name_info = name_to_info(names,user_name,user_ethnicity)
      puts "Your rank is #{name_info[:rank]}"
-     puts "Your ethnicity is #{name_info[:ethnicity].downcase.capitalize}"
      puts "Your count is #{name_info[:count]}"
   rescue
      puts "Sorry, that name is not listed."
   end
-
 end
 run(name_data)
 
 
-puts name_to_rank(name_data,"ava", "bLACK NON HISPANIC")
-
+#puts name_to_rank(name_data,"ava", "bLACK NON HISPANIC")
