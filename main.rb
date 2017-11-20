@@ -1021,20 +1021,12 @@ name_data = JSON.parse(%q|
 #end
 
 #PHASE 3
-<<<<<<< HEAD
 def name_to_rank(info,user_name, user_ethnicity)
 info.uniq!.each do |person|
-  if person["nm"] == user_name.upcase && person["ethcty"] == user_ethnicity.upcase 
-    return {name_rank: person["rnk"], name_birthyear: person["brth_yr"], name_count: person["cnt"] }
-end
-=======
-def name_to_info(names,user_name)
-  names.uniq!.each do |person|
-    if person["nm"] == user_name.upcase
-      return {rank: person["rnk"], ethnicity: person["ethcty"], count: person["cnt"]}
-      #break
+    if person["nm"] == user_name.upcase && person["ethcty"] == user_ethnicity.upcase 
+        return {name_rank: person["rnk"], name_birthyear: person["brth_yr"], name_count: person["cnt"] }
     end
-  end
+end
 end  
 
 #puts name_to_info(name_data,"ava")
