@@ -22601,6 +22601,7 @@ def name_to_info(names,user_name,user_ethnicity,user_gender)
 end  
 
 def run(names)
+  puts "Welcome, this program will take in the name you type in and will return the rank and the count (the number of people with this name) of the name."
   puts "What is your name?"
   user_name = gets.chomp.upcase
   puts "What is your Mother's ethnicity? (Asian and Pacific Islander, Black Non Hispanic, Hispanic, or White Non Hispanic)"
