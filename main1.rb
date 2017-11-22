@@ -22573,45 +22573,47 @@ puts name_data["data"][0][13]#rank
 
 
 #PHASE 2
-# puts "What is your name?"
-# user_name = gets.chomp.upcase
-# puts "What is your ethnicity?"
-# user_ethnicity = gets.chomp.upcase
-# puts "What is your gender?"
-# user_gender = gets.chomp.upcase
-# #puts "Which year data would you like to see?(2011~2014)"
-# #data_year = gets.chomp
-# name_data["data"].each do |person|
-# if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
-#     puts "Your rank is #{person[13]} in #{person[8]}"
-# end
-# #break
+puts "What is your name?"
+user_name = gets.chomp.upcase
+puts "What is your ethnicity?"
+user_ethnicity = gets.chomp.upcase
+puts "What is your gender?"
+user_gender = gets.chomp.upcase
+#puts "Which year data would you like to see?(2011~2014)"
+#data_year = gets.chomp
+name_data["data"].each do |person|
+if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
+    puts "Your rank is #{person[13]} in #{person[8]}"
+end
+#break
 # end
 
 #PHASE 3
-def name_to_info(names,user_name,user_ethnicity,user_gender)
-  names["data"].each do |person|
-    if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
-      return {rank: person[13], count: person[12], year: person[8]}
-      #break
-    end
-  end
-end  
+# def name_to_info(names,user_name,user_ethnicity,user_gender)
+#   names["data"].each do |person|
+#     if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
+#       return {rank: person[13], count: person[12], year: person[8]}
+#       #break
+#     end
+#   end
+# end  
 
-def run(names)
-  puts "What is your name?"
-  user_name = gets.chomp.upcase
-  puts "What is your ethnicity?"
-  user_ethnicity = gets.chomp.upcase
-  puts "What is your gender?"
-  user_gender = gets.chomp.upcase
-begin
-      name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
-      puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
-      #puts "Your count is #{name_info[:count]}"
-  rescue
-      puts "Sorry, the name is not listed."
-  end
-end
-run(name_data)
+# def run(names)
+#   puts "What is your name?"
+#   user_name = gets.chomp.upcase
+#   puts "What is your ethnicity?(type in 'Hispanic', 'White Non Hispanic', 'Asian and Pacific Islander', or 'Black Non Hispanic')"
+#   user_ethnicity = gets.chomp.upcase
+#   puts "What is your gender?(type in 'female' or 'male')"
+#   user_gender = gets.chomp.upcase
+#   puts "Which year data would you like to see?(2011~2014)"
+#   data_year = gets.chomp
+# begin
+#       name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
+#       puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
+#       #puts "Your count is #{name_info[:count]}"
+#   rescue
+#       puts "Sorry, the name is not listed."
+#   end
+# end
+# run(name_data)
 
