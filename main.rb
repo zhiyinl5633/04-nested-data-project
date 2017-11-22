@@ -22566,11 +22566,11 @@ name_data = JSON.parse(%q|
 |)
 
 #PHASE 1
-puts name_data["data"][0][9]#gender
-puts name_data["data"][0][10]#ethnicity
-puts name_data["data"][0][11]#name
-puts name_data["data"][0][12]#count
-puts name_data["data"][0][13]#rank
+# puts name_data["data"][0][9]#gender
+# puts name_data["data"][0][10]#ethnicity
+# puts name_data["data"][0][11]#name
+# puts name_data["data"][0][12]#count
+# puts name_data["data"][0][13]#rank
 
 
 #PHASE 2
@@ -22588,8 +22588,6 @@ puts name_data["data"][0][13]#rank
 # end
 
 #PHASE 3
-
-
 def name_to_info(names,user_name,user_ethnicity,user_gender)
   names["data"].each do |person|
     if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
