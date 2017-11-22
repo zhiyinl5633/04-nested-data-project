@@ -22588,31 +22588,6 @@ puts name_data["data"][0][13]#rank
 # end
 
 #PHASE 3
-<<<<<<< HEAD
-# def name_to_info(names,user_name,user_ethnicity,user_gender)
-#   names["data"].each do |person|
-#     if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
-#       return {rank: person[13], count: person[12], year: person[8]}
-#     end
-#   end
-# end  
-
-# def run(names)
-#   puts "What is your name?"
-#   user_name = gets.chomp.upcase
-#   puts "What is your Mother's ethnicity? (Asian and Pacific Islander, Black Non Hispanic, Hispanic, or White Non Hispanic)"
-#   user_ethnicity = gets.chomp.upcase
-#   puts "What is your gender?"
-#   user_gender = gets.chomp.upcase
-# begin
-#       name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
-#       puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
-#   rescue
-#       puts "Sorry, the name is not listed."
-#   end
-# end
-# run(name_data)
-=======
 
 
 def name_to_info(names,user_name,user_ethnicity,user_gender)
@@ -22639,5 +22614,4 @@ begin
   end
 end
 run(name_data)
->>>>>>> 157fa216129411ed557acbe2a22f79736c947cd3
 
