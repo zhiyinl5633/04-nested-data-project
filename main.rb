@@ -1,4 +1,3 @@
-#Link to data: https://data.cityofnewyork.us/Health/Most-Popular-Baby-Names-by-Sex-and-Mother-s-Ethnic/25th-nujf
 require 'json'
 name_data = JSON.parse(%q|
 
@@ -22570,6 +22569,7 @@ name_data = JSON.parse(%q|
 puts name_data["data"][0][9]#gender
 puts name_data["data"][0][10]#ethnicity
 puts name_data["data"][0][11]#name
+puts name_data["data"][0][12]#count
 puts name_data["data"][0][13]#rank
 
 
@@ -22580,37 +22580,35 @@ puts name_data["data"][0][13]#rank
 # user_ethnicity = gets.chomp.upcase
 # puts "What is your gender?"
 # user_gender = gets.chomp.upcase
-# puts "Which year data would you like to see?(2011~2014)"
-# data_year = gets.chomp
 # name_data["data"].each do |person|
 # if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
-#     puts "Your rank is #{person[13]} in #{person[8]}"
+#     puts "Your rank is #{person[13]} and your count is #{person[12]} according to the statistics in #{person[8]}."
 # end
-# #break
+# break
 # end
 
 #PHASE 3
-def name_to_info(names,user_name,user_ethnicity,user_gender)
-  names["data"].each do |person|
-    if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
-      return {rank: person[13], count: person[12], year: person[8]}
-    end
-  end
-end  
+# def name_to_info(names,user_name,user_ethnicity,user_gender)
+#   names["data"].each do |person|
+#     if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
+#       return {rank: person[13], count: person[12], year: person[8]}
+#     end
+#   end
+# end  
 
-def run(names)
-  puts "What is your name?"
-  user_name = gets.chomp.upcase
-  puts "What is your Mother's ethnicity? ('Asian and Pacific Islander', 'Black Non Hispanic', 'Hispanic', or 'White Non Hispanic')"
-  user_ethnicity = gets.chomp.upcase
-  puts "What is your gender?"
-  user_gender = gets.chomp.upcase
-begin
-      name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
-      puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
-  rescue
-      puts "Sorry, the name is not listed."
-  end
-end
-run(name_data)
+# def run(names)
+#   puts "What is your name?"
+#   user_name = gets.chomp.upcase
+#   puts "What is your Mother's ethnicity? (Asian and Pacific Islander, Black Non Hispanic, Hispanic, or White Non Hispanic)"
+#   user_ethnicity = gets.chomp.upcase
+#   puts "What is your gender?"
+#   user_gender = gets.chomp.upcase
+# begin
+#       name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
+#       puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
+#   rescue
+#       puts "Sorry, the name is not listed."
+#   end
+# end
+# run(name_data)
 
