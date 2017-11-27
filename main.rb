@@ -22577,7 +22577,7 @@ name_data = JSON.parse(%q|
 ##asks questions and takes in user's input 
 # puts "What is your name?"
 # user_name = gets.chomp.upcase
-# puts "What is your ethnicity?"
+# puts "What is your Mother's ethnicity? ('Asian and Pacific Islander', 'Black Non Hispanic', 'Hispanic', or 'White Non Hispanic')"
 # user_ethnicity = gets.chomp.upcase
 # puts "What is your gender?"
 # user_gender = gets.chomp.upcase
