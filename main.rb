@@ -22574,20 +22574,23 @@ name_data = JSON.parse(%q|
 
 
 #PHASE 2
+##asks questions and takes in user's input 
 # puts "What is your name?"
 # user_name = gets.chomp.upcase
 # puts "What is your ethnicity?"
 # user_ethnicity = gets.chomp.upcase
 # puts "What is your gender?"
 # user_gender = gets.chomp.upcase
+##prints out user's rank and count in 2011 by using user's info
 # name_data["data"].each do |person|
 # if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
 #     puts "Your rank is #{person[13]} and your count is #{person[12]} according to the statistics in #{person[8]}."
 # end
-# break
+# break #gives the first set of data in 2011
 # end
 
 #PHASE 3
+#returns the information stored in each symbol
 def name_to_info(names,user_name,user_ethnicity,user_gender)
   names["data"].each do |person|
     if person[11] == user_name && person[10] == user_ethnicity && person[9] == user_gender
@@ -22595,7 +22598,7 @@ def name_to_info(names,user_name,user_ethnicity,user_gender)
     end
   end
 end  
-
+#asks questions and takes in user's input 
 def run(names)
   puts "Welcome, this program will take in the name you type in and will return the rank and the count (the number of people with this name) of the name."
   puts "What is your name?"
@@ -22605,11 +22608,11 @@ def run(names)
   puts "What is your gender?"
   user_gender = gets.chomp.upcase
 begin
-      name_info = name_to_info(names,user_name,user_ethnicity,user_gender)
-      puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}."
+      name_info = name_to_info(names,user_name,user_ethnicity,user_gender)#calls the name_to_info method
+      puts "Your rank is #{name_info[:rank]} and your count is #{name_info[:count]} according to the statistics in #{name_info[:year]}." #prints out user's rank and count in 2011 by using user's info that is returned
   rescue
-      puts "Sorry, the name is not listed."
+      puts "Sorry, the name is not listed."#prints when user's info does not match the data
   end
 end
-run(name_data)
+run(name_data)#calls the method that runs the program
 
